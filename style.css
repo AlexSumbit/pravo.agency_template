@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/*!
+ * -------------------------------------
+ * Theme Name: ______
+ * Theme URI: http://decollete.com.ua/
+ * Author: Decollete Team
+ * Author URI: http://decollete.com.ua/
+ * Description: Custom wp theme special for _____
+ * Version: 1.0
+ * -------------------------------------
+ */
+@font-face {
+  font-family: "GothaPro";
+  src: url("assets/fonts/GothaProReg.eot");
+  src: url("assets/fonts/GothaProReg.eot?#iefix") format("embedded-opentype"), url("assets/fonts/GothaProReg.woff") format("woff"), url("assets/fonts/GothaProReg.ttf") format("truetype"), url("assets/fonts/GothaProReg.svg#GothaPro") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.grid-3,
+.grid-32 {
+  display: inline-block;
+  vertical-align: top; }
+
+.grid-row {
+  display: table;
+  font-size: 0 !important;
+  width: 100%; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  line-height: 1; }
+
+body {
+  font-family: "GothaPro", serif;
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none; }
+
+a {
+  text-decoration: none; }
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  display: block;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus {
+  outline: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+.cf:before, .cf:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0; }
+
+.cf:after {
+  clear: both; }
+
+@font-face {
+  font-family: "icons";
+  src: url("assets/fonts/icons.eot");
+  src: url("assets/fonts/icons.eot?#iefix") format("eot"), url("assets/fonts/icons.woff") format("woff"), url("assets/fonts/icons.ttf") format("truetype"), url("assets/fonts/icons.svg#icons") format("svg"); }
+
+.icon-arrow:before, .icon-document:before, .icon-f:before, .icon-i:before, .icon-in:before, .icon-law:before, .icon-note:before, .icon-play:before, .icon-preload:before, .icon-quote:before, .icon-t:before, .icon-target:before, .icon-triangle:before, .icon-youtube:before {
+  font-family: "icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none; }
+
+.icon-arrow:before {
+  content: ""; }
+
+.icon-document:before {
+  content: ""; }
+
+.icon-f:before {
+  content: ""; }
+
+.icon-i:before {
+  content: ""; }
+
+.icon-in:before {
+  content: ""; }
+
+.icon-law:before {
+  content: ""; }
+
+.icon-note:before {
+  content: ""; }
+
+.icon-play:before {
+  content: ""; }
+
+.icon-preload:before {
+  content: ""; }
+
+.icon-quote:before {
+  content: ""; }
+
+.icon-t:before {
+  content: ""; }
+
+.icon-target:before {
+  content: ""; }
+
+.icon-triangle:before {
+  content: ""; }
+
+.icon-youtube:before {
+  content: ""; }
+
+.section {
+  position: relative; }

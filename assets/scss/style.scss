@@ -1,0 +1,38 @@
+/*!
+ * -------------------------------------
+ * Theme Name: ______
+ * Theme URI: http://decollete.com.ua/
+ * Author: Decollete Team
+ * Author URI: http://decollete.com.ua/
+ * Description: Custom wp theme special for _____
+ * Version: 1.0
+ * -------------------------------------
+ */
+
+// I dont use Compass because
+// Compass is no longer actively maintained
+
+
+
+// Base Style
+@import "base/_mixin";		// миксины
+@import "base/_fonts";		// шрифты
+@import "base/_variables";	// переменные
+@import "base/_extend";		// расширения
+@import "base/_function";	// функции
+@import "base/_sprite";		// спрайт
+@import "base/_normalize";	// нормализация стилей
+@import "base/_grid";		// сетка
+@import "base/_icons";      // иконки
+
+
+//	Style
+@import "_common";          // Общие стили
+@import "sections/_top";
+
+@import "_adaptive";			// стили адаптивки
+
+
+
+
+

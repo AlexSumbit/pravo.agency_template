@@ -1,0 +1,127 @@
+@font-face {
+	font-family: "icons";
+	src: url('../fonts/icons.eot');
+	src: url('../fonts/icons.eot?#iefix') format('eot'),
+		url('../fonts/icons.woff') format('woff'),
+		url('../fonts/icons.ttf') format('truetype'),
+		url('../fonts/icons.svg#icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == arrow {
+		$char: "\E001";
+	}
+	@if $filename == documents {
+		$char: "\E002";
+	}
+	@if $filename == f {
+		$char: "\E003";
+	}
+	@if $filename == i {
+		$char: "\E004";
+	}
+	@if $filename == in {
+		$char: "\E005";
+	}
+	@if $filename == law {
+		$char: "\E006";
+	}
+	@if $filename == note {
+		$char: "\E007";
+	}
+	@if $filename == play {
+		$char: "\E008";
+	}
+	@if $filename == preload {
+		$char: "\E009";
+	}
+	@if $filename == quote {
+		$char: "\E00A";
+	}
+	@if $filename == t {
+		$char: "\E00B";
+	}
+	@if $filename == target {
+		$char: "\E00C";
+	}
+	@if $filename == triangle {
+		$char: "\E00D";
+	}
+	@if $filename == youtube {
+		$char: "\E00E";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-arrow {
+	@include icon(arrow);
+}
+.icon-documents {
+	@include icon(documents);
+}
+.icon-f {
+	@include icon(f);
+}
+.icon-i {
+	@include icon(i);
+}
+.icon-in {
+	@include icon(in);
+}
+.icon-law {
+	@include icon(law);
+}
+.icon-note {
+	@include icon(note);
+}
+.icon-play {
+	@include icon(play);
+}
+.icon-preload {
+	@include icon(preload);
+}
+.icon-quote {
+	@include icon(quote);
+}
+.icon-t {
+	@include icon(t);
+}
+.icon-target {
+	@include icon(target);
+}
+.icon-triangle {
+	@include icon(triangle);
+}
+.icon-youtube {
+	@include icon(youtube);
+}
