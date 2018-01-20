@@ -562,12 +562,12 @@ a {
     margin: 0;
     padding: 0; }
     .lang-switcher-checkbox:checked + .labels {
-      left: -16px; }
+      left: -23px; }
   .lang-switcher .labels {
     position: absolute;
-    left: 14px;
+    left: 9px;
     height: 100%;
-    width: 66px;
+    width: 78px;
     z-index: 0;
     display: -webkit-box;
     display: -ms-flexbox;

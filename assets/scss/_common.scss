@@ -40,15 +40,15 @@ a{
         padding: 0;
 
         &:checked +.labels{
-            left: -16px;
+            left: -23px;
         }
     }
 
     .labels{
         position: absolute;
-        left: 14px;
+        left: 9px;
         height: 100%;
-        width: 66px;
+        width: 78px;
         z-index: 0;
         display: flex;
         align-items: center;
