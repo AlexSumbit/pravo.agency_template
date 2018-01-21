@@ -1,11 +1,23 @@
 .section-top{
     background-color: #f5f5f5;
+    overflow: hidden;
     height: 670px;
-    padding-bottom: 60px;
+    padding: 0;
+
+    &-text{
+        margin-top: 78px;
+    }
+
+    .container{
+        position: relative;
+        overflow: auto;
+        height: 100%;
+    }
 
     .header{
         margin-top: 46px;
         display: flex;
+        align-items: center;
         flex-wrap: wrap;
         justify-content: flex-end;
         width: 100%;
@@ -15,21 +27,32 @@
         margin-right: auto;
     }
 
-    .nav{
-        text-transform: uppercase;
-        color: #3f4147;
-        font-size: 12px;
-        margin-top: 13px;
-        margin-right: 121px;
-        font-family: $font-medium;
+    .man-bg{
+        position: absolute;
+        bottom: 0;
+        right: 80px;
+    }
 
-        &-item{
-            margin-left: 32px;
-            transition: $time color;
-
-            &:hover{
-                color: $hover-color;
+    .section{
+    
+        &-title{
+            text-align: left;
+            padding-bottom: 32px;
+            line-height: 35px;
+            text-transform: initial;
+    
+            &:after{
+                @extend %before;
+                left: 0;
+                transform: translate(0, -50%);
             }
+        }
+        &-description{
+            text-align: left;
+            margin-top: 29px;
+            width: 450px;
+            line-height: 22px;
         }
     }
 }
+
