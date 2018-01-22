@@ -262,6 +262,10 @@ strong{
                 transform: rotateZ(360deg);
             }
         }
+
+        &:active{
+            box-shadow: none;
+        }
     }
 
     .circle{
@@ -367,6 +371,201 @@ strong{
             top: 50%;
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
+        }
+    }
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    overflow: hidden;
+
+    &-block{
+        width: 420px;
+        padding: 0 20px;
+        box-sizing: border-box;
+
+        &--full{
+            width: 100%;
+            margin-top: 40px;
+            text-align: center;
+        }
+    }
+
+    &-label{
+        display: block;
+        padding: 10px 0;
+        font-family: $font-medium;
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+
+    &-textarea{
+        border: 1px solid $border-light-color;
+        display: block;
+        width: 100%;
+        resize: none;
+        outline: none;
+        cursor: pointer;
+        padding: 15px;
+        font-size: 15px;
+        font-family: $font;
+        transition: $time;
+        height: 230px;
+        box-sizing: border-box;
+
+        &::placeholder{
+            color: #9fa0a3;
+        }
+
+        &:focus{
+            border-color: $text-color;
+        }
+    }
+
+    &-input{
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $border-light-color;
+        padding: 10px 0;
+        margin-bottom: 10px;
+        outline: none;
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transition: $time;
+        text-transform: uppercase;
+        font-family: $font-black;
+        font-size: 11px;
+        cursor: pointer;
+
+        &:focus{
+            border-bottom-color: $text-color;
+        }
+
+        &::placeholder{
+            font-family: $font-medium;
+        }
+    }
+
+    .btn{
+        padding: 0 34px;
+        height: 44px;
+        font-size: 11px;
+        font-family: "GothamProBlack";
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 0;
+    }
+}
+
+.checkbox{
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: $font;
+    transition: $time;
+    position: relative;
+
+    &-input{
+        visibility: hidden;
+
+        &:checked + .checkbox-view{
+            color: $hover-color;
+            font-family: $font-bold;
+            
+            &:before{
+                border-color: $hover-color;
+                background-color: $hover-color;
+            }
+        }
+    }
+
+    &:hover{
+
+        .checkbox-view{
+            color: $hover-color;
+            font-family: $font-bold;
+
+            &:before{
+                border-color: $hover-color;
+            }
+        }
+    }
+
+    &-view{
+        padding-left: 10px;
+
+        &:before{
+            @extend %before;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border: 2px solid $border-light-color;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.accordeon{
+    box-sizing: border-box;
+    border: 1px solid $border-light-color;
+    border-bottom: none;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    &-header{
+        height: 50px;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        border-bottom: 1px solid $border-light-color;
+        background-color: #fcfcfd;
+        cursor: pointer;
+
+        &:hover{
+            
+        }
+
+        &-text{
+            font-size: 11px;
+            text-transform: uppercase;
+            font-family: $font-medium;
+        }
+
+        &-icon{
+            color: $border-light-color;
+            transition: $time;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid $border-light-color;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            font-size: 11px;
+        }
+    }
+
+    &-content{
+        display: none;
+        padding: 20px;
+        box-sizing: border-box;
+        border-bottom: 1px solid $border-light-color;
+        overflow: hidden;
+    }
+
+    &-opened{
+        .accordeon-header-icon{
+            transform: rotate(180deg);
         }
     }
 }

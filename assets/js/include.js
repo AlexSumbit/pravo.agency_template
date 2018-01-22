@@ -25,5 +25,12 @@ $(document).ready(function(){
         
         if(!hasClass) $(this).addClass("services-item-active");
     });
+
+
+    ////// accordeon
+    $(".js_accordeon .accordeon-header").click(function(e){
+        $(this).parent().toggleClass("accordeon-opened");
+        $(this).parent().find(".accordeon-content").slideToggle(300);
+    });
     
 });
