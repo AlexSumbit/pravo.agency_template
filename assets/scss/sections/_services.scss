@@ -1,0 +1,243 @@
+.section-services{
+
+    .services{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 25px;
+        padding-left: 80px;
+        letter-spacing: 0.5px;
+        color: #414252;
+        z-index: 0;
+
+        &-item{
+            width: 50%;
+            margin-top: 60px;
+            margin-bottom: 25px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid transparent;
+            position: relative;
+            cursor: pointer;
+            z-index: 0;
+
+            &-icon{
+                font-size: 40px;
+                color: #b6b6bb;
+                transition: $time;
+            }
+
+            &:hover{
+                .icon-info{
+                    color: #fff;
+                    background-color: $hover-color;
+                }
+
+                .services-item-icon{
+                    color: $hover-color;
+                }
+            }
+
+            &:nth-child(even){
+                padding-left: 90px;
+                
+                .icon-info{
+                    right: 5px;
+                }
+            }
+            &:nth-child(odd){
+                padding-right: 70px;
+                
+                .icon-info{
+                    right: 95px;
+                }
+            }
+
+            &-info{
+                margin-left: 32px;
+            }
+
+            &-title{
+                font-size: 14px;
+                line-height: 18px;
+                text-transform: uppercase;
+                margin-top: 7px;
+                margin-bottom: 25px;
+                font-family: $font-bold;
+            }
+
+            &-active{
+                z-index: 999;
+                &:nth-child(odd){
+                    border-right: 1px solid $hover-color;
+                    &:after{
+                        right: -7px;
+                        border-right-color: transparent;
+                        border-top-color: transparent;
+                    }
+                }
+                &:nth-child(even){
+                    border-left: 1px solid $hover-color;
+                    &:after{
+                        left: -7px;
+                        border-bottom-color: transparent;
+                        border-left-color: transparent;
+                    }
+                }
+                &:after{
+                    @extend %before;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #fff;
+                    transform-origin: 50% 50%;
+                    transform: rotate(45deg);
+                    border: 1px solid $hover-color;
+                    top: 20%;
+                }
+                
+                .icon-info{
+                    color: #fff;
+                    background-color: $hover-color;
+                }
+
+                .order{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            .icon-info{
+                font-size: 12px;
+                width: 30px;
+                height: 30px;
+                border: 2px solid $hover-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                box-sizing: border-box;
+                position: absolute;
+                top: 10px;
+                transition: $time height;
+            }
+
+            .top-left{
+                top: 0;
+                left: -101%;
+                right: 101%;
+                bottom: auto;
+            }
+            .top-right{
+                top: 0;
+                right: -101%;
+                left: 101%;
+                bottom: auto;
+            }
+            .bot-left{
+                top: auto;
+                left: -101%;
+                right: 101%;
+                bottom: 0;
+            }
+            .bot-right{
+                top: auto;
+                right: -101%;
+                left: 101%;
+                bottom: 0;
+            }
+        }
+    }
+
+    .order{
+        position: absolute;
+        background-color: #fff;
+        z-index: 999;
+        padding: 30px 10px;
+        min-width: 100%;
+        transition: $time opacity;
+        overflow: hidden;
+        box-sizing: border-box;
+        visibility: hidden;
+        opacity: 0;
+
+        &-row{
+            display: flex;
+        }
+
+        &-category{
+            width: 15%;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-family: $font-black;
+            margin-top: 20px;
+        }
+
+        &-title{
+            text-transform: uppercase;
+            font-size: 15px;
+            font-family: $font-bold;
+            margin-bottom: 20px;
+        }
+
+        &-content{
+            width: 85%;
+
+            .section-description{
+                width: 100%;
+                text-align: left;
+                font-size: 13px;
+                margin-bottom: 20px;
+            }
+
+            .btn{
+                padding: 0 34px;
+                height: 44px;
+                font-size: 11px;
+                font-family: $font-black;
+            }
+        }
+
+        &-price-text{
+            font-family: $font-bold;
+            font-size: 18px;
+            display: block;
+            margin-top: 30px;
+
+            &:before,
+            &:after{
+                font-size: 11px;
+                color: #727478;
+            }
+
+            &:before{
+                content: "от ";
+                font-family: $font;
+            }
+            &:after{
+                content: " грн.";
+            }
+        }
+
+        &-size{
+            display: inline-block;
+            width: 30%;
+            margin-top: 20px;
+
+            &-text{
+                font-family: $font-bold;
+                font-size: 13px;
+                position: relative;
+
+                &:after{
+                    @extend %before;
+                    top: 100%;
+                    left: 0;
+                    font-size: 11px;
+                    margin-top: 5px;
+                    font-family: $font;
+                    color: #727478;
+                    content: "Сотрудников";
+                }
+            }
+        }
+    }
+}
