@@ -88,7 +88,7 @@
   display: inline-block;
   vertical-align: middle; }
 
-.section-title:after, .dots-separator:after, .btn-play:after, .btn-play:before, .list-item:before, .lang-switcher .labels:after, .section-top .section-title:after, .section-services .services-item-active:after, .section-services .order-size-text:after {
+.section-title:after, .dots-separator:after, .btn-play:after, .btn-play:before, .list-item:before, .lang-switcher .labels:after, .section-top .section-title:after, .section-services .services-item-active:after, .section-services .order-size-text:after, .section-reviews .reviews-item-position:after, .section-reviews .reviews-item-video:after {
   content: '';
   display: block;
   position: absolute; }
@@ -750,6 +750,36 @@ strong {
       opacity: 0;
       visibility: hidden;
       background-color: #a70c5d; }
+  .btn-load-more {
+    margin: 0 auto;
+    padding: 0;
+    color: #454545;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 11px; }
+    .btn-load-more span {
+      color: #a70c5d;
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 20px;
+      width: 24px;
+      height: 24px;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%; }
+    .btn-load-more:hover {
+      -webkit-transform: none;
+              transform: none;
+      opacity: 1; }
+      .btn-load-more:hover span {
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg); }
   .btn .circle {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -1091,6 +1121,123 @@ strong {
         color: #727478;
         content: "Сотрудников"; }
 
+.section-reviews {
+  padding-bottom: 56px;
+  border-bottom: 1px solid #f4f4f4; }
+  .section-reviews .reviews {
+    margin-top: 50px;
+    margin-bottom: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .section-reviews .reviews-item {
+      width: 30%;
+      min-width: 300px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      margin: 0;
+      cursor: pointer; }
+      .section-reviews .reviews-item:hover .reviews-item-icon {
+        color: #a70c5d;
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1); }
+      .section-reviews .reviews-item:hover .reviews-item-name {
+        color: #a70c5d; }
+      .section-reviews .reviews-item:hover .reviews-item-img {
+        margin-left: 25px; }
+      .section-reviews .reviews-item-icon {
+        font-size: 18px;
+        color: #c9cacf;
+        display: inline-block;
+        margin-bottom: 24px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
+        .section-reviews .reviews-item-icon--video {
+          font-size: 24px; }
+      .section-reviews .reviews-item-text {
+        font-family: "GothamPro";
+        font-size: 17px;
+        line-height: 25px;
+        color: #454545;
+        margin-top: 0;
+        margin-bottom: 30px; }
+      .section-reviews .reviews-item-img {
+        display: inline-block;
+        -o-object-fit: cover;
+           object-fit: cover;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%; }
+      .section-reviews .reviews-item-name {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 13px;
+        font-family: "GothamProBold";
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
+      .section-reviews .reviews-item-position {
+        text-transform: uppercase;
+        font-size: 12px;
+        padding-right: 18px;
+        position: relative; }
+        .section-reviews .reviews-item-position:after {
+          width: 3px;
+          height: 3px;
+          background-color: #a70c5d;
+          border-radius: 50%;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          right: 6px; }
+      .section-reviews .reviews-item-link {
+        font-size: 12px;
+        font-family: "GothamProBold";
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        text-decoration: underline; }
+        .section-reviews .reviews-item-link:hover {
+          color: #a70c5d; }
+      .section-reviews .reviews-item-video {
+        margin-bottom: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative; }
+        .section-reviews .reviews-item-video:hover:after {
+          -webkit-transform: translate(-50%, -50%) scale(1.2);
+                  transform: translate(-50%, -50%) scale(1.2); }
+        .section-reviews .reviews-item-video:after {
+          font-family: 'icons';
+          content: "\E008";
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          width: 42px;
+          height: 42px;
+          background-color: #fff;
+          border-radius: 50%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-transition: 0.3s;
+          transition: 0.3s; }
+
 @media (max-width: 1199px) {
   .section-top .man-bg {
     right: 2%; }
@@ -1125,6 +1272,19 @@ strong {
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9); }
     .section-services .order .section-description {
       display: none; }
+  .section-reviews .reviews {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .section-reviews .reviews-item {
+      width: 90%;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px dotted #dfdfe2; }
+      .section-reviews .reviews-item-video {
+        display: inline-block; }
+      .section-reviews .reviews-item-icon {
+        display: block; }
   .container-light {
     padding-left: 20px; } }
 

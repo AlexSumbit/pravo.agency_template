@@ -234,6 +234,36 @@ strong{
         }
     }
 
+    &-load-more{
+        margin: 0 auto;
+        padding: 0;
+        color: $text-color;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        font-size: 11px;
+
+        span{
+            color: $hover-color;
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 20px;
+            width: 24px;
+            height: 24px;
+            transition: $time;
+            transform-origin: 50% 50%;
+        }
+
+        &:hover{
+            transform: none;
+            opacity: 1;
+
+            span{
+                transform: rotateZ(360deg);
+            }
+        }
+    }
+
     .circle{
         display: inline-flex;
         justify-content: center;

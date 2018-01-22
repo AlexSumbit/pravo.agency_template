@@ -70,6 +70,28 @@
         }
     }
 
+    .section-reviews{
+
+        .reviews{
+            justify-content: center;
+
+            &-item{
+                width: 90%;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 1px dotted $border-light-color;
+
+                &-video{
+                    display: inline-block;
+                }
+
+                &-icon{
+                    display: block;
+                }
+            }
+        }
+    }
+
     .container{
     
         &-light{
