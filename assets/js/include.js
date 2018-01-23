@@ -9,6 +9,15 @@ $(document).ready(function(){
         $(".js_btn-menu").toggleClass("btn-menu-opened");
     });
 
+    //scroll to anchor
+    $(".js_nav .nav-item").click(function(){
+        var elementClick = $(this).attr("href")
+        var destination = $(elementClick).offset().top;
+        $("html:not(:animated),body:not(:animated)").animate({
+            scrollTop: destination
+        }, 800);
+    });
+
 
     ////// section-services
 
