@@ -1,0 +1,133 @@
+.section-reviews{
+    padding-bottom: 56px;
+    border-bottom: 1px solid $border-section-color;
+
+
+    .reviews{
+        margin-top: 50px;
+        margin-bottom: 75px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-item{
+            width: 30%;
+            min-width: 300px;
+            box-sizing: border-box;
+            margin: 0;
+            cursor: pointer;
+
+            &:hover{
+                .reviews-item-icon{
+                    color: $hover-color;
+                    transform: scale(1.1);
+                }
+
+                .reviews-item-name{
+                    color: $hover-color;
+                }
+
+                .reviews-item-img{
+                    margin-left: 25px;
+                }
+            }
+
+            &-icon{
+                font-size: 18px;
+                color: #c9cacf;
+                display: inline-block;
+                margin-bottom: 24px;
+                transition: $time;
+
+                &--video{
+                    font-size: 24px;
+                }
+            }
+
+            &-text{
+                font-family: $font;
+                font-size: 17px;
+                line-height: 25px;
+                color: $text-color;
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+
+            &-img{
+                display: inline-block;
+                object-fit: cover;
+                width: 50px;
+                height: 50px;
+                margin-bottom: 20px;
+                transition: $time;
+                transform-origin: 50% 50%;
+            }
+
+            &-name{
+                margin-top: 0;
+                margin-bottom: 20px;
+                font-size: 13px;
+                font-family: $font-bold;
+                transition: $time;
+            }
+
+            &-position{
+                text-transform: uppercase;
+                font-size: 12px;
+                padding-right: 18px;
+                position: relative;
+
+                &:after{
+                    @extend %before;
+                    width: 3px;
+                    height: 3px;
+                    background-color: $hover-color;
+                    border-radius: 50%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 6px;
+                }
+            }
+
+            &-link{
+                font-size: 12px;
+                font-family: $font-bold;
+                transition: $time;
+                text-decoration: underline;
+
+                &:hover{
+                    color: $hover-color;
+                }
+            }
+
+            &-video{
+                margin-bottom: 20px;
+                display: flex;
+                position: relative;
+
+                &:hover{
+                    &:after{
+                        transform: translate(-50%, -50%) scale(1.2);
+                    }
+                }
+
+                &:after{
+                    @extend %before;
+                    font-family: 'icons';
+                    content: "\E008";
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 42px;
+                    height: 42px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: $time;
+                }
+            }
+        }
+    }
+}

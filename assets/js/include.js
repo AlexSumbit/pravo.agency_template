@@ -9,6 +9,20 @@ $(document).ready(function(){
         $(".js_btn-menu").toggleClass("btn-menu-opened");
     });
 
+    //scroll to anchor
+    $(".js_nav .nav-item").click(function(){
+        var elementClick = $(this).attr("href")
+        var destination = $(elementClick).offset().top;
+        
+        // hide menu on item click
+        $(".js_nav").removeClass("nav-opened");
+        $(".js_btn-menu").removeClass("btn-menu-opened");
+
+        $("html:not(:animated),body:not(:animated)").animate({
+            scrollTop: destination
+        }, 800);
+    });
+
 
     ////// section-services
 
@@ -24,6 +38,13 @@ $(document).ready(function(){
         $(".js_services-item").removeClass("services-item-active");
         
         if(!hasClass) $(this).addClass("services-item-active");
+    });
+
+
+    ////// accordeon
+    $(".js_accordeon .accordeon-header").click(function(e){
+        $(this).parent().toggleClass("accordeon-opened");
+        $(this).parent().find(".accordeon-content").slideToggle(300);
     });
     
 });
