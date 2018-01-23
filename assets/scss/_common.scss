@@ -252,6 +252,9 @@ strong{
             height: 24px;
             transition: $time;
             transform-origin: 50% 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         &:hover{
