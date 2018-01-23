@@ -13,6 +13,11 @@ $(document).ready(function(){
     $(".js_nav .nav-item").click(function(){
         var elementClick = $(this).attr("href")
         var destination = $(elementClick).offset().top;
+        
+        // hide menu on item click
+        $(".js_nav").removeClass("nav-opened");
+        $(".js_btn-menu").removeClass("btn-menu-opened");
+
         $("html:not(:animated),body:not(:animated)").animate({
             scrollTop: destination
         }, 800);
