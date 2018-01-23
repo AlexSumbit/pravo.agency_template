@@ -564,7 +564,8 @@ strong {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #454545;
-  padding: 52px 0 0 0; }
+  padding: 52px 0 0 0;
+  font-family: "GothamPro"; }
   .section-title {
     font-family: "GothamProBold";
     text-align: center;
@@ -772,7 +773,16 @@ strong {
       -webkit-transition: 0.3s;
       transition: 0.3s;
       -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%; }
+              transform-origin: 50% 50%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
     .btn-load-more:hover {
       -webkit-transform: none;
               transform: none;
@@ -1424,6 +1434,60 @@ strong {
 .section-request {
   padding-bottom: 30px;
   border-bottom: 1px solid #f4f4f4; }
+
+.section-footer {
+  padding-bottom: 30px;
+  padding-top: 32px;
+  text-align: center; }
+  .section-footer .footer-heading {
+    text-transform: uppercase;
+    font-family: "GothamProBlack";
+    font-size: 11px; }
+  .section-footer .footer-contacts {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-family: "GothamPro";
+    line-height: 30px; }
+  .section-footer .footer-link {
+    margin-top: 15px;
+    color: #a70c5d;
+    display: inline-block;
+    font-size: 18px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    text-decoration: underline; }
+    .section-footer .footer-link:hover {
+      opacity: 0.8; }
+  .section-footer .footer-socials {
+    margin-top: 20px;
+    font-size: 0; }
+    .section-footer .footer-socials-item {
+      font-size: 11px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border: 2px solid #dfdfe2;
+      border-radius: 50%;
+      margin: 0 5px;
+      width: 40px;
+      height: 40px;
+      color: #dfdfe2;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+      .section-footer .footer-socials-item:hover {
+        color: #4a6bb8;
+        border-color: #4a6bb8; }
+  .section-footer .footer-copyright {
+    font-size: 12px;
+    margin-top: 30px;
+    margin-bottom: 0; }
 
 @media (max-width: 1199px) {
   .section-top .man-bg {
